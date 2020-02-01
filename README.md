@@ -1,1 +1,1 @@
-# Exercícios feitos ao longo do curso de Php avançado.
+# Exercícios feitos durante o curso de Php avançado.
