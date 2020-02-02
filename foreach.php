@@ -1,20 +1,31 @@
 <?php
 
-$contasCorrentes = [   //Define um Array associativo com a chave sendo o cpf e dentro dela os dados da conta
-    12345678910 => [
-        'titular' => 'Diego',
-        'saldo' => 2600
-    ],
-    12345678911 => [
-        'titular' => 'Carol',
-        'saldo' => 1000
-    ],
-    12325678912 => [
-    'titular' => 'Dick',
-    'saldo' => 10000
-    ]
+'123.456.789-10' => [
+    'titular' => 'Diego',
+    'saldo' => 2600
+],
+
+'123.456.789-11' => [
+    'titular' => 'Carol',
+    'saldo' => 1000
+],
+'123.256.789-12' => [
+'titular' => 'Dick',
+'saldo' => 10000
+]
 ];
 
-foreach ($contasCorrentes as $cpf => $conta) { //foreach de $contasCorrentes indo na chave que é o cpf da conta
-    echo $conta['titular'] . PHP_EOL;
+$contasCorrentes[] = [
+'titular' => 'Bruce',
+'saldo' => 2000
+];
+
+$contasCorrentes[] = [
+'titular' => 'Bruce 2',
+'saldo' => 2002
+];
+
+
+foreach ($contasCorrentes as $cpf => $conta) {
+echo $cpf . " " . $conta['titular'] . PHP_EOL;
 }
