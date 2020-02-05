@@ -1,5 +1,9 @@
 <?php
 
+function exibeMensagem($mensagem){ //Função para exibir mensagem de erro
+    echo $mensagem . PHP_EOL;
+}
+
 $contasCorrentes = [
     '123.456.789-10' => [
         'titular' => 'Maria',
@@ -16,12 +20,17 @@ $contasCorrentes = [
 ];
 
 
+if (500 > $contasCorrentes['123.456.789-10']['saldo']) { 
+    exibeMensagem("Você não pode sacar este valor"); //Chamada da função exibe mensagem
+} else
+    $contasCorrentes['123.456.789-10']['saldo'] -= 500;
 
-if (500> $contasCorrentes['123.456.789-10']['saldo']) {  //Validação para se o saldo é menor do que a valor a sacar
-    echo "Você não pode sacar este valor" . PHP_EOL;
-} else 
-    $contasCorrentes['123.456.789-11']['saldo'] -= 500; //Acessar o saldo e subtrair determinado valor
+
+if (500 > $contasCorrentes['123.456.789-11']['saldo']) {
+    exibeMensagem("Você não pode sacar este valor"); //Chamada da função exibe mensagem
+} else
+    $contasCorrentes['123.456.789-11']['saldo'] -= 500;
 
 foreach ($contasCorrentes as $cpf => $conta) {
-    echo $cpf . " " . $conta['titular'] . ' ' . $conta['saldo'] . PHP_EOL;
+    exibeMensagem($cpf . " " . $conta['titular'] . ' ' . $conta['saldo']); //Chamada da função exibe mensagem
 }
