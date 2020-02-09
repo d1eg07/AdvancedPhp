@@ -1,9 +1,7 @@
-<?php 
+<?php
 
+$idadeList = [23, 19, 25, 30, 41, 18, 21, 35];
 
-$idades = [21, 23, 19, 16, 20, 40, 50, 70, 31]; // cria array de idades.
-
-for($i = 0; $i < count($idades); $i++)
-{
-    echo $idades[$i]  . PHP_EOL;
+for ($i = 0; $i < count($idadeList); $i++) {
+    echo $idadeList[$i] . PHP_EOL;
 }
