@@ -1,13 +1,9 @@
 <?php
 
-function exibeMensagem(string $mensagem){
-    echo $mensagem . PHP_EOL;
-}
-
 function sacar(array $conta, float $valorASacar): array
 {
     if ($valorASacar > $conta['saldo']) {
-        exibeMensagem("Você não pode sacar este valor");
+        exibeMensagem("Você não tem saldo suficiente");
     } else {
         $conta['saldo'] -= $valorASacar;
     }
@@ -15,12 +11,17 @@ function sacar(array $conta, float $valorASacar): array
     return $conta;
 }
 
-function depositar(array $conta, float $valorADepositar): array {
+function exibeMensagem(string $mensagem)
+{
+    echo $mensagem . PHP_EOL;
+}
+
+function depositar(array $conta, float $valorADepositar): array
+{
     if ($valorADepositar > 0) {
         $conta['saldo'] += $valorADepositar;
     } else {
-        exibeMensagem("Depósitos precisam ser positivos");
+        exibeMensagem("Depositos precisam ser positivos");
     }
-
     return $conta;
 }
