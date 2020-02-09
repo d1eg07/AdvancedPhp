@@ -1,8 +1,6 @@
 <?php
 
-function exibeMensagem($mensagem){ //Função para exibir mensagem de erro
-    echo $mensagem . PHP_EOL;
-}
+require 'funcoes.php'; //incluindo arquivos de função 
 
 $contasCorrentes = [
     '123.456.789-10' => [
