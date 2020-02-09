@@ -1,7 +1,9 @@
-<?php 
+<?php
 
+$idadeList = [21, 23, 19, 25, 30, 41, 18];
 
-$idades = [21, 23, 19, 16, 20, 40]; // cria array de idades.
-$umaIdade = $idades[3]; //armazena o índice 3 na variável $umaIdade.
+$idadeList[] = 20;
 
-echo $umaIdade; //exibe a variavel $umaIdade de acordo com o índice do array.
+foreach ($idadeList as $idade) {
+    echo $idade . PHP_EOL;
+}
