@@ -32,9 +32,8 @@ $contasCorrentes['123.256.789-12'] = depositar(
     900
 );
 
+echo "<ul>";
 foreach ($contasCorrentes as $cpf => $conta) {
-    ['titular' => $titular, 'saldo' => $saldo] = $conta;
-    exibeMensagem(
-        "$cpf $titular  $saldo"
-    );
+    exibeConta($conta);
 }
+echo "</ul>";
